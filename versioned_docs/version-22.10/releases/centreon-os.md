@@ -19,6 +19,20 @@ Read more about version 22.10 in our [blog post](https://www.centreon.com/en/blo
 
 ## Centreon Web
 
+### 22.10.20
+
+Release date: `March 13, 2024`
+
+#### Bug fixes
+
+- [Authentication] Fixed issue with SSO authentication.
+- [CLAPI] Fixed a decoding issue affecting the export of HTML entities.
+- [Install] A unified unattended.sh script is now available for version 22.10.
+
+#### Security fixes
+
+- [Security] Improved allowed commands for Centreon Gorgone.
+
 ### 22.10.19
 
 Release date: `February 14, 2024`
@@ -399,6 +413,24 @@ Release date: `October 26, 2022`
 
 ## Centreon Collect
 
+### 22.10.9
+
+Release date: `March 6, 2024`
+
+#### Centreon Broker
+
+##### Enhancements
+
+- [Broker] Broker now drops metrics whose names are longer than 1000 characters to avoid errors in the database. An error is logged when it occurs.	
+
+##### Bug fixes
+
+- [Broker] Fixed conflicts that occurred when adding and/or removing hosts from hostgroups.
+- [Broker] Fixed some incorrect statuses in Broker's statistics retrieved by the `broker-stats.json` file.
+- [Engine] Semicolons are no longer considered as the beginning of a comment in Engine's configuration files. This is because comments were not useful in these files, and they prevented the use of semicolons in macros (e.g., passwords).
+- [Engine] Removed the unnecessary check of Anomaly Detection configuration files during the configuration test before deployment.
+- [Install] Fixed an issue in the installation process that emptied the `retention.dat` file, causing the temporary loss of all resources' statuses and the permanent loss of current acknowledgements and downtimes.
+
 ### 22.10.8
 
 Release date: `February 14, 2024`
@@ -549,6 +581,18 @@ Release date: `October 26, 2022`
 - [Code] Calls to the `atoi()` C function have been replaced by more secure functions
 
 ## Centreon Gorgone
+
+### 22.10.5
+
+Release date: `March 13, 2024`
+
+#### Bug fixes
+
+- Added the Auto Discovery patterns to the default commands whitelist.
+
+#### Security fixes
+
+- Improved list of allowed commands for Auto Discovery.
 
 ### 22.10.4
 
