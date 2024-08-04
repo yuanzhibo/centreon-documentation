@@ -564,7 +564,7 @@ apt update
 2. Install the agent and the plugin:
 
 ```bash
-apt -y install centreon-nrpe4-daemon centreon-plugin-operatingsystems-linux-local
+apt  install centreon-nrpe4-daemon centreon-plugin-operatingsystems-linux-local
 ```
 
 3. Change the IP address for the `allowed_hosts` parameter in **/etc/nagios/nrpe.cfg** (replace `POLLER_IP_ADDRESS` with the IP address of the poller that will monitor the host).
